@@ -6,6 +6,34 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, nobis omnis perferendis quas quibusdam tempora unde. Accusamus delectus earum eius esse facere illum quae quasi rem rerum sint? Architecto, dolor?</p>
+<div>
+    <div th:object="${country}">
+        <p th:text="*{id}"> id </p>
+        <p th:text="*{name}"> aname </p>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="c : ${countries}">
+            <td th:text="${c.id}">
+                id
+            </td>
+            <td th:text="${c.name}">
+                name
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, nobis omnis perferendis quas quibusdam tempora
+        unde.
+        Accusamus delectus earum eius esse facere illum quae quasi rem rerum sint? Architecto, dolor?</p>
+</div>
 </body>
 </html>
