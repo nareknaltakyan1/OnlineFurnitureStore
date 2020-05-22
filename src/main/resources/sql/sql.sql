@@ -11,7 +11,7 @@ create table furniture_type
 create table country
 (
     id       int         not null auto_increment primary key,
-    name     varchar(35) not null unique
+    name     varchar(35) not null
 );
 
 
