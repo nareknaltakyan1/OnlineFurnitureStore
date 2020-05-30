@@ -5,13 +5,15 @@ use furnitureDB;
 create table furniture_type
 (
     id       int         not null auto_increment primary key,
-    name     varchar(35) not null unique
+    name     varchar(35) not null unique,
+    removed  boolean
 );
 
 create table country
 (
     id       int         not null auto_increment primary key,
-    name     varchar(35) not null
+    name     varchar(35) not null unique,
+    removed  boolean
 );
 
 
@@ -19,7 +21,8 @@ create table material
 (
     id       int          not null auto_increment primary key,
     name     varchar(35)  not null unique,
-    description	 varchar(350) not null
+    description	 varchar(350) not null,
+    removed  boolean
 );
 
 

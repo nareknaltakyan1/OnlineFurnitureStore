@@ -13,6 +13,9 @@ public class Country {
     @Column
     private String name;
 
+    @Column
+    private Boolean removed;
+
     public Country() {
     }
 
@@ -30,5 +33,13 @@ public class Country {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Boolean getRemoved() {
+        return removed;
+    }
+
+    public void setRemoved(Boolean removed) {
+        this.removed = removed;
     }
 }
